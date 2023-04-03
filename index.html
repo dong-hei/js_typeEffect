@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #363633;
+        width: 100%;
+        height: 100vh;
+        margin:0;
+    }
+
+    .typing-text{
+        font-family: 'Nanum Brush Script', cursive;
+        font-size: 2rem;
+        color:white;
+        border-right: 3px solid white;
+        animation: blink .5s infinite, typing 3s steps(22);
+        /* typing 2s steps(22) : 3초에 걸쳐서 22번 동작하게한다 */
+        width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        /* 텍스트가 한줄로 출력되게 하는 white-space */
+        /* 부모영역이 충분하지 않으면 감춘다 */
+    }
+
+    @keyframes blink{
+        50%{
+            border-color: transparent;
+        }
+        /* 0초에서~0.25초까지는 흰색에서 투명한색으로 변한다. */
+        /* 이게 커서가 깜빡이는것처럼보인다. */
+    }
+
+    @keyframes typing{
+        from{
+            width: 0;
+        }
+        to{
+            width: 485px;
+        }
+        /* 0픽셀 476픽셀로 22번 동작한다. */
+    }
+</style>
+</head>
+<body>
+    <p class="typing-text">안녕하세요 반가워요! 방문해주셔서 감사해요! 🥂</p>
+</body>
+</html>
